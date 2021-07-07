@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  border-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px #999;
+  transition: background-color 250ms cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+
+.item:hover {
+  transform: scale(1.02);
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.status {
+  display: inline-block;
+  margin: 0 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.online {
+  composes: status;
+  background-color: #69ac6b;
+}
+
+.offline {
+  composes: status;
+  background-color: #ec3424;
+}
+
+.avatar {
+  margin-right: 15px;
+}
+
+.name {
+  font-size: 20px;
+}
